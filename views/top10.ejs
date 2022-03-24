@@ -1,0 +1,25 @@
+<html lang="en">
+  <%- include('./partials/header.ejs') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <div class="dropdowntop10">
+      <div class="dropdown">
+          <h2>Choose location to view top 10 films:</h2>
+      </br>Select Store:</br>
+          <button class="dropbtn">Top 10 By Store</button>
+          <div class="dropdown-content">
+              <% if (stores.length > 0) { %>
+                  <% stores.forEach(store => { %> 
+                      <b
+                      ><a href="<%=store.store_id %>"
+                        ><%= store.store_name %></a
+                      ></b
+                    >
+                  <% }) %>
+              <% } %>
+          </div>
+      </div>
+  </div>
+  </body>
+  <%- include('./partials/footer.ejs') %>
+</html>
