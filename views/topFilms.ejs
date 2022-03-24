@@ -1,0 +1,20 @@
+
+<html lang="en">
+    <%- include('./partials/header.ejs') %>
+    <body>
+        <%- include('./partials/nav.ejs') %>
+        <div class="stores content">
+
+            <h2><b>TOP 10 Films by Location </h2>
+
+            <% if (topFilms.length > 0) { %>
+                <% topFilms.forEach(topFilm => { %>
+                    <p class="topFilms"><b><%=topFilm.title%></b> - $<%= topFilm.monies%> 
+                    </p> 
+                <% }) %>
+            <% } %>
+        </div>
+    </body>
+    <%- include('./partials/footer.ejs') %>
+</html>
+

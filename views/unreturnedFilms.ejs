@@ -1,0 +1,17 @@
+<html lang="en">
+  <%- include('./partials/header.ejs') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <div class="stores content">
+      <h2><b>Films currently not yet returned</b></h2>
+      <% if (unreturnedFilms.length > 0) { %> <%
+      unreturnedFilms.forEach(unreturnedFilms => { %>
+      <p class="unreturned">
+        <b><%=unreturnedFilms.customer%></b> - <%= unreturnedFilms.phone%>, <%=
+        unreturnedFilms.title%>
+      </p>
+      <% }) %> <% } %>
+    </div>
+  </body>
+  <%- include('./partials/footer.ejs') %>
+</html>
